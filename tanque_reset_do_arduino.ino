@@ -1,30 +1,30 @@
-//BIBLIOTECAS PARA O LCD
+//LCD LIBRARIES
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-//ENDEREÇO DO LCD
+//LCD ADRESS
 #define endereco 0x27                                  // endereços mais comum 0x27 para o CI Philips PCF8574T
 //#define endereco 0x3F                                // endereços mais comum 0x3F para o CI Philips PCF8574AT
 
-//DIMENÇÕOES DO LCD
+//LCD DIMENTIONS
 #define colunas 16
 #define linhas 2
 
-//INSTÂNCIA DO LCD
+//LCD INSTANCE
 LiquidCrystal_I2C lcd(endereco, colunas, linhas);      // Criando uma estrutura com o nome "lcd" nos parâmetros indicados
 
 
-//NOMES DAS ENTRADAS
+//INPUT NAMES
 #define POTENTIOMETER_PIN A0
 
-//NOMES DAS SAÍDAS
+//OUTPUT NAMES
 #define red 2
 #define green 4
 #define PWM_PIN 5
 const byte interruptPin = 3;
 
 
-//VARIÂVEIS GLOBAIS GERAIS
+//GLOBAL VARIABLES
 int potentiometer_value;
 int tank_percentage;
 float motor_dutycycle;
